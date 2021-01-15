@@ -17,7 +17,7 @@ _____
 #### **Week 2**
 ##### Navigation, Navigation Bar, and Breadcrumbs
 ##### User Input: Buttons and Forms
-##### Displaying Content: Tables, Panels, Wells
+##### Displaying Content: Tables, Panels, Wells, Cards
 ##### Images and Media: Images, Thumbnails, Media Objects
 ##### Alerting Users: Labels, Badges, Alerts, Progress Bars
 
