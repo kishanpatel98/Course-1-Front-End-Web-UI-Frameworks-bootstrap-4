@@ -91,9 +91,11 @@
           <img src="img/logo.png" class="img-fluid">
         </div>
         <div class="col-12 col-sm align-self-center mt-5 mt-sm-0">
-          <a role="button" class="btn btn-block nav-link btn-warning font-weight-bold text-white" data-toggle="tooltip"
+          <!-- <a role="button" class="btn btn-block nav-link btn-warning font-weight-bold text-white" data-toggle="tooltip"
             data-html="true" title="Or Call us at  <br><strong>+852 12345678</strong>" data-placement="bottom"
-            href="#reservationCard">Reserve Table</a>
+            href="#reserveModal">Reserve Table</a> -->
+          <a role="button" class="btn btn-block nav-link btn-warning font-weight-bold text-white" data-toggle="modal"
+            data-target="#reserveModal">Reserve Table</a>
         </div>
       </div>
     </div>
@@ -155,7 +157,8 @@
         </div>
       </div>
     </div>
-    <!-- <div class="row row-content align-items-center">
+  </div>
+  <!-- <div class="row row-content align-items-center">
       <div class="col-12 col-sm-4 order-sm-last col-md-3">
         <h3>Our Lipsmacking Culinary Creations</h3>
       </div>
@@ -165,8 +168,8 @@
           <div class="media-body">
             <h2 class="mt-0">Uthappizza <span class="badge badge-danger">HOT</span> <span
                 class="badge badge-pill badge-secondary">$4.99</span></h2>
-            <!-- D-none = hidden on all sizes, d-sm-block = visible for small and bigger sizes -->
-    <!-- <p class="d-none d-sm-block"> A unique combination of Indian Uthappam (pancake) and Italian pizza, topped
+            D-none = hidden on all sizes, d-sm-block = visible for small and bigger sizes -->
+  <!-- <p class="d-none d-sm-block"> A unique combination of Indian Uthappam (pancake) and Italian pizza, topped
               with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
           </div>
         </div>
@@ -211,72 +214,98 @@
         </div>
       </div>
     </div> -->
-    <div class="row row-content align-items-top" id="reservationCard">
-      <div class="col-12 col-sm-8 mx-auto">
-        <div class="card">
-          <h3 class="card-header bg-warning text-white">Reserve A Table</h3>
-          <div class="card-body">
-            <form>
-              <div class="form-group row">
-                <label class="col-12 col-sm-2 col-form-label" for="guests">Number of Guests</label>
-                <div class="col-12 col-sm-8" id="guests">
-                  <div class="form-check form-check-inline ">
-                    <input class="form-check-inline" type="radio" name="numGuest" id="1" value="1" checked>
-                    <label class="form-checked-label" for="1">
-                      1
-                    </label>
+
+
+  <div class="row row-content align-items-top" id="reservationCard">
+    <div class="col-12 col-sm-8 mx-auto">
+      <div id="reserveModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+          <div class="modal-content">
+            <div class="modal-header bg-warning text-white">
+              <h4 class="modal-title">Reserve A Table</h4>
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group row">
+                  <label class="col-12 col-sm-3 col-form-label" for="guests">Number of Guests</label>
+                  <div class="col-12 col-sm-9" id="guests">
+                    <div class="form-check form-check-inline ">
+                      <input class="form-check-inline" type="radio" name="numGuest" id="1" value="1" checked>
+                      <label class="form-checked-label" for="1">
+                        1
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-inline" type="radio" name="numGuest" id="2" value="2">
+                      <label class="form-checked-label" for="2">
+                        2
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-inline" type="radio" name="numGuest" id="3" value="3">
+                      <label class="form-checked-label" for="3">
+                        3
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-inline" type="radio" name="numGuest" id="4" value="4">
+                      <label class="form-checked-label" for="4">
+                        4
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-inline" type="radio" name="numGuest" id="5" value="5">
+                      <label class="form-checked-label" for="5">
+                        5
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-inline" type="radio" name="numGuest" id="6" value="6">
+                      <label class="form-checked-label" for="6">
+                        6
+                      </label>
+                    </div>
                   </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-inline" type="radio" name="numGuest" id="2" value="2" unchecked>
-                    <label class="form-checked-label" for="2">
-                      2
+                </div>
+                <div class="form-group row">
+                  <label class="col-form-label col-12 col-sm-3">Section</label>
+                  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-success active">
+                      <input type="radio" name="section" id="nonsmoking" autocomplete="off" checked>Non-Smoking
                     </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-inline" type="radio" name="numGuest" id="3" value="3" unchecked>
-                    <label class="form-checked-label" for="3">
-                      3
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-inline" type="radio" name="numGuest" id="4" value="4" unchecked>
-                    <label class="form-checked-label" for="4">
-                      4
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-inline" type="radio" name="numGuest" id="5" value="5" unchecked>
-                    <label class="form-checked-label" for="5">
-                      5
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-inline" type="radio" name="numGuest" id="6" value="6" unchecked>
-                    <label class="form-checked-label" for="6">
-                      6
+                    <label class="btn btn-danger">
+                      <input type="radio" name="section" id="smoking" autocomplete="off">Smoking
                     </label>
                   </div>
                 </div>
-              </div>
-              <div class="form-group row">
-                <label class="col-form-label col-12 col-sm-2" for="date">Date and Time</label>
-                <input type="date" class="form-control col-12 col-sm-3" id="date" name="date" placeholder="Date">
-                <input type="time" class="form-control col-12 col-sm-3 mx-sm-2" id="time" name="time"
-                  placeholder="Time">
-              </div>
-              <div class="form-group row">
-                <div class="offset-sm-2">
-                  <button type="submit" class="btn btn-primary">
-                    Reserve
-                  </button>
+                <div class="form-group row">
+                  <label class="col-form-label col-12 col-sm-3" for="date">Date and Time</label>
+                  <input type="date" class="form-control col-10 col-sm-3" id="date" name="date">
+                  <input type="time" class="form-control col-10 col-mr-auto col-sm-3 mt-2 ml-sm-2 mt-sm-0" id="time"
+                    name="time">
                 </div>
-              </div>
-            </form>
+                <div class="form-group row">
+                  <div class="offset-sm-3 mt-2">
+                    <button type="button" class="btn btn-secondary">
+                      Cancel
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                      Reserve
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+
 
   <footer class="footer">
     <div class="container">
@@ -327,11 +356,11 @@
   <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script>
+  <!-- <script>
     $(document).ready(function () {
       $('[data-toggle="tooltip"]').tooltip();
     });
-  </script>
+  </script> -->
 </body>
 
 </html>
